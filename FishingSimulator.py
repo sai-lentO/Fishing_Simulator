@@ -15,7 +15,6 @@ FISH = [
 
 
 def create_game():
-    """Создаёт начальные данные игрока."""
     game = {
         "coins": 0,
         "inventory": []
