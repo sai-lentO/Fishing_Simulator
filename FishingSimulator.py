@@ -280,7 +280,7 @@ def main():
         if not running:
             break
 
-        # Движение декоративных рыб в воде.
+       
         for fish in fishes:
             fish["x"] += fish["speed"] * dt
 
@@ -304,7 +304,7 @@ def main():
         for y in range(0, HEIGHT, 60):
             pygame.draw.line(screen, DARK_GREEN, (0, y), (WIDTH, y), 1)
 
-        # Поверхность реки и луч радара.
+        
         pygame.draw.line(
             screen, BRIGHT_GREEN, (0, WATER_Y), (WIDTH, WATER_Y), 2
         )
@@ -313,7 +313,7 @@ def main():
             (int(scan_x), WATER_Y), (int(scan_x), HEIGHT), 2
         )
 
-        # Берег и рыбак.
+        
         pygame.draw.rect(screen, DARK_GREEN, (0, WATER_Y - 15, 175, 30))
         pygame.draw.line(
             screen, GREEN,
@@ -327,7 +327,7 @@ def main():
             (105, WATER_Y - 49), (105, WATER_Y - 15), 3
         )
 
-        # Удочка, леска и поплавок — декоративные элементы.
+        
         pygame.draw.line(screen, BRIGHT_GREEN, rod_base, rod_tip, 4)
         pygame.draw.line(
             screen, BRIGHT_GREEN,
@@ -368,7 +368,7 @@ def main():
         if show_inventory:
             draw_inventory(screen, font, small_font, get_inventory(game))
 
-        # Нижняя строка сообщений.
+        
         pygame.draw.rect(screen, BLACK, (0, HEIGHT - 44, WIDTH, 44))
         pygame.draw.line(
             screen, GREEN,
