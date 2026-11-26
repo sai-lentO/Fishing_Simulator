@@ -15,6 +15,7 @@ FISH = [
 
 
 def create_game():
+    """Создаёт начальные данные игрока."""
     game = {
         "coins": 0,
         "inventory": []
@@ -84,7 +85,7 @@ def handle_player_input(event, game):
             for fish in game["inventory"]:
                 result = result + fish["name"] + ", "
 
-            return result
+            return result.rstrip(", ")
 
         elif event.key == pygame.K_ESCAPE:
             return "exit"
